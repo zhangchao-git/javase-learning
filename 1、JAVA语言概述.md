@@ -10,7 +10,6 @@
        }
     }
    ```
-   注意点：
    - Java源文件以“java”为扩展名。源文件的基本组成部分是类（class），如本类中的HelloWorld类。
    一个源文件中最多只能有一个public类。其它类的个数不限，如果源文件包含一个public类，则文件名必须按该类名命名。
    - Java应用程序的执行入口是main()方法。它有固定的书写格式：public static void main(String[] args)  {...}
