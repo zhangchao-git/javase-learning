@@ -2,7 +2,7 @@ package day09.java;
 
 import java.util.Date;
 
-/*
+/**
  * toString()方法：
  * java.lang.Object类的toString()方法的定义如下：
  * public String toString() {

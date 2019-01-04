@@ -1,9 +1,5 @@
 package day07.java1;
 
-class A {
-
-}
-
 public class Student extends Person {
     //public class Student extends Person,A{
 //	private String name;

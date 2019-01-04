@@ -2,7 +2,7 @@ package day09.java;
 
 import org.junit.Test;
 
-/*
+/**
  * Junit单元测试类
  * 1.当前工程下-右键build path-add libraries-Junit4
  * 2.在主类中,创建一个空参的无返回值的方法，（如：public void test1()）用于代码的测试，方法上声明：@Test

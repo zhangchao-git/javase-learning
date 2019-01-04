@@ -1,8 +1,7 @@
 package day07.exer1;
 
-/*
+/**
  * 在Kids类的main方法中实例化Kids的对象someKid，用该对象访问其父类的成员变量及方法。
-
  */
 public class TestKids {
     public static void main(String[] args) {

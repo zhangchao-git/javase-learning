@@ -1,10 +1,9 @@
 package day07.exer1;
 
-/*
+/**
  * 定义类Kids继承ManKind，并包括
-成员变量int yearsOld；
-方法printAge()打印yearsOld的值。
-
+ * 成员变量int yearsOld；
+ * 方法printAge()打印yearsOld的值。
  */
 public class Kids extends ManKind {
     private int yearsOld;

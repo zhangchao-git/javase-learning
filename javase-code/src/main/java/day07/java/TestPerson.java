@@ -1,14 +1,13 @@
 package day07.java;
 
-/*
+/**
  * this:
  * 1.可以用来修饰属性、方法、构造器
  * 2.this理解为当前对象或当前正在创建的对象.比如：this.name,this.show();
- *
+ * <p>
  * 3.可以在构造器中通过“this(形参)”的方式显示的调用本类中其它重载的指定的构造器。
- *   要求：1.在构造器内部必须声明在首行！
- *       2.若一个类中有n个构造器，那么最多有n-1个构造器中使用了this(形参);
- *
+ * 要求：1.在构造器内部必须声明在首行！
+ *      2.若一个类中有n个构造器，那么最多有n-1个构造器中使用了this(形参);
  */
 public class TestPerson {
     public static void main(String[] args) {

@@ -1,11 +1,10 @@
 package day07.exer1;
 
-/*
+/**
  * 定义一个ManKind类，包括
-成员变量int sex和int salary；
-方法void manOrWorman()：根据sex的值显示“man”(sex==1)或者“woman”(sex==0)；
-方法void employeed()：根据salary的值显示“no job”(salary==0)或者“ job”(salary!=0)。
-
+ * 成员变量int sex和int salary；
+ * 方法void manOrWorman()：根据sex的值显示“man”(sex==1)或者“woman”(sex==0)；
+ * 方法void employeed()：根据salary的值显示“no job”(salary==0)或者“ job”(salary!=0)。
  */
 public class ManKind {
     private int sex;

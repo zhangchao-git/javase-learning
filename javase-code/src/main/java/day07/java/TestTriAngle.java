@@ -1,9 +1,8 @@
 package day07.java;
 
-/*
+/**
  * 编写两个类，TriAngle和TestTriAngle，其中TriAngle中声明私有的底边长base和高height，
  * 同时声明公共方法访问私有变量；另一个类中使用这些公共方法，计算三角形的面积。
-
  */
 public class TestTriAngle { //Angle:角      Angel:天使   host    guest
     public static void main(String[] args) {
