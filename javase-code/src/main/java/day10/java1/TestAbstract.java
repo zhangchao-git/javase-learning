@@ -1,6 +1,6 @@
 package day10.java1;
 
-/*
+/**
  * abstract:抽象的,可以用来修饰类、方法
  *
  * 1.abstract修饰类：抽象类
