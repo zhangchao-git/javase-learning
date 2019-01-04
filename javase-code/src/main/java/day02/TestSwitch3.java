@@ -1,12 +1,12 @@
 package day02;
 
-/*
-对学生成绩大于60分的，输出“合格”。低于60分的，输出“不合格”。
-
-说明：
-1.当多个case语句处理的语句块一致时，可以统一来书写
-2.一定情况下switch-case与if-else之间可以相互转换。
-*/
+/**
+ * 对学生成绩大于60分的，输出“合格”。低于60分的，输出“不合格”。
+ * <p>
+ * 说明：
+ * 1.当多个case语句处理的语句块一致时，可以统一来书写
+ * 2.一定情况下switch-case与if-else之间可以相互转换。
+ */
 class TestSwitch3 {
     public static void main(String[] args) {
         int score = 67;

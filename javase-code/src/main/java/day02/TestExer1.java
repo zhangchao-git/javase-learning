@@ -30,7 +30,7 @@ class TestExer1 {
         String binary = Integer.toBinaryString(i);
 
         System.out.println(binary);
-
+        //Ê®Áù½øÖÆ
         String hex = Integer.toHexString(i);
         System.out.println(hex);
 		

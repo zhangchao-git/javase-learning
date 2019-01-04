@@ -1,18 +1,20 @@
-package day03;/*
-①初始化条件
-②循环条件
-③迭代条件
-④循环体
+package day03;
 
-1.格式：
-①
-do{
-	④
-	③
-}while(②);
-
-2.do-while与while的区别:do-while循环至少会执行一次！
-*/
+/**
+ * ①初始化条件
+ * ②循环条件
+ * ③迭代条件
+ * ④循环体
+ * <p>
+ * 1.格式：
+ * ①
+ * do{
+ * ④
+ * ③
+ * }while(②);
+ * <p>
+ * 2.do-while与while的区别:do-while循环至少会执行一次！
+ */
 
 class TestDoWhile {
     public static void main(String[] args) {

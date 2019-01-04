@@ -1,10 +1,11 @@
-package day02;/*
-编写程序：由键盘输入三个整数分别存入变量num1、num2、num3，
-对它们进行排序(使用 if-else if-else),并且从小到大输出。
-
-说明：如果if-else if-else条件的执行语句块{}只有一条语句的话，那么这一对{}可以省略
-建议：不要省略{}
-*/
+package day02;
+/**
+ * 编写程序：由键盘输入三个整数分别存入变量num1、num2、num3，
+ * 对它们进行排序(使用 if-else if-else),并且从小到大输出。
+ * <p>
+ * 说明：如果if-else if-else条件的执行语句块{}只有一条语句的话，那么这一对{}可以省略
+ * 建议：不要省略{}
+ */
 
 import java.util.Scanner;
 

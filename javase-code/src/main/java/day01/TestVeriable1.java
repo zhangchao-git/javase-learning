@@ -1,10 +1,10 @@
 package day01;
 
-/*
-变量之间的运算：(不考虑boolean。剩下：char byte short int long float double)
-1.自动类型转换
-2.强制类型转换
-*/
+/**
+ * 变量之间的运算：(不考虑boolean。剩下：char byte short int long float double)
+ * 1.自动类型转换
+ * 2.强制类型转换
+ */
 class TestVeriable1 {
     public static void main(String[] args) {
         //1.自动类型转换:当容量小的数据类型与容量大的数据类型做运算时，容量小的会自动转换为

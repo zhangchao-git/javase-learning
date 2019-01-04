@@ -1,9 +1,9 @@
 package day02;
 
-/*
-1.格式：三种
-2.执行if-else语句时，一定会选择其中的一个路径执行，而且也仅会选择一条路径。
-*/
+/**
+ * 1.格式：三种
+ * 2.执行if-else语句时，一定会选择其中的一个路径执行，而且也仅会选择一条路径。
+ */
 class TestIf1 {
     public static void main(String[] args) {
         int age = 28;

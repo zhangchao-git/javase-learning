@@ -7,7 +7,7 @@ package day01;
  * @version v1.0
  */
 public class HelloJava {
-    /*
+    /**
     1.源文件以.java结尾
     2.源文件中可以有多个class声明的类
     3.类中可以有主方法（即main()方法），其格式是固定的：public static void main(String[] args){}
@@ -18,6 +18,7 @@ public class HelloJava {
     8.多行注释不能够嵌套
     */
     public static void main(String[] args) {
+        //这是程序的输出语句
         System.out.println("Hello World!" + '\n' + "Hello atguigu.com");
 
     }

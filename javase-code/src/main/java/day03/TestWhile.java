@@ -1,18 +1,18 @@
 package day03;
 
-/*
-①初始化条件
-②循环条件
-③迭代条件
-④循环体
-1.格式：
-①
-while(②){
-	④
-	③
-}
-2.for循环与while可以相互转换。
-*/
+/**
+ * ①初始化条件
+ * ②循环条件
+ * ③迭代条件
+ * ④循环体
+ * 1.格式：
+ * ①
+ * while(②){
+ * ④
+ * ③
+ * }
+ * 2.for循环与while可以相互转换。
+ */
 class TestWhile {
     public static void main(String[] args) {
         //100以内的偶数的输出,及其和

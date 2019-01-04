@@ -2,7 +2,7 @@ package day05.java;
 
 import java.util.Scanner;
 
-/*
+/**
  * 1.面向对象的编程关注于类的设计
  * 2.设计类实际上就是设计类的成员
  * 3.基本的类的成员：属性（成员变量或Field）  & 方法（Method）

@@ -1,7 +1,8 @@
-package day02;/*
-编写程序：从键盘上输入2014年的“month”和“day”，要求通过程序输出输入的日期为2014年的第几天
-*/
+package day02;
 
+/**
+ * 编写程序：从键盘上输入2014年的“month”和“day”，要求通过程序输出输入的日期为2014年的第几天
+ */
 import java.util.Scanner;
 
 class TestSwitch4 {
