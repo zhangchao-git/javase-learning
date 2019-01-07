@@ -9,6 +9,7 @@
 
     <modules>
         <module>javase-code</module>
+        <module>mysql</module>
     </modules>
 
 
