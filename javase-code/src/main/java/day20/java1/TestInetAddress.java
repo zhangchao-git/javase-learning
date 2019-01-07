@@ -1,9 +1,8 @@
 package day20.java1;
 
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 
-/*
+/**
  * 网络通信的第一个要素：IP地址。通过IP地址，唯一的定位互联网上一台主机
  * InetAddress:位于java.net包下
  * 1.InetAddress用来代表IP地址。一个InetAdress的对象就代表着一个IP地址

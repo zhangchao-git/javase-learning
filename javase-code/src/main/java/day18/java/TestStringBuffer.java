@@ -1,10 +1,8 @@
 package day18.java;
 
-import java.util.ArrayList;
-
 import org.junit.Test;
 
-/*
+/**
  * java.lang.StringBuffer：可变的字符序列
  * java.lang.StringBuilder:可变的字符序列，是jdk5.0新加入的，线程不安全，效率要高于StringBuffer.
  */
@@ -44,7 +42,7 @@ public class TestStringBuffer {
 
     }
 
-    /*
+    /**
      * java.lang.StringBuffer和StringBuilder:代表可变的字符序列，可以对字符串内容进行增删
      *
      *  StringBuffer append(String s),   StringBuffer append(int n) ,

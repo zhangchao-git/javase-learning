@@ -1,13 +1,13 @@
 package day18.java;
 
+import org.junit.Test;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.junit.Test;
-
-/*
+/**
  * 与时间相关的类：
  * 1.System 类下的currentTimeMillis();
  * 2.Date类:java.util.Date
@@ -63,7 +63,7 @@ public class TestDate {
         }
     }
 
-    /*
+    /**
      * java.text.SimpleDateFormat类易于国际化
      * 格式化：日期--->文本 使用SimpleDateFormat的format()方法
      * 解析：文本--->日期 使用SimpleDateFormat的parse()方法

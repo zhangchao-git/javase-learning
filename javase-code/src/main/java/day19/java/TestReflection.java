@@ -1,13 +1,11 @@
 package day19.java;
 
-import java.io.File;
-import java.io.FileInputStream;
+import org.junit.Test;
+
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Properties;
-
-import org.junit.Test;
 
 public class TestReflection {
     //关于类的加载器：ClassLoader
@@ -81,7 +79,7 @@ public class TestReflection {
         System.out.println(clazz1 == clazz5);//true
     }
 
-    /*
+    /**
      * java.lang.Class:是反射的源头。
      * 我们创建了一个类，通过编译（javac.exe）,生成对应的.class文件。之后我们使用java.exe加载（JVM的类加载器完成的）
      * 此.class文件，此.class文件加载到内存以后，就是一个运行时类，存在在缓存区。那么这个运行时类本身就是一个Class的实例！

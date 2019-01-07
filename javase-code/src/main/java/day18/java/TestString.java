@@ -3,7 +3,7 @@ package day18.java;
 import org.junit.Test;
 
 public class TestString {
-    /*
+    /**
      * 1.字符串 与基本数据类型、包装类之间转换
      * ①字符串 --->基本数据类型、包装类:调用相应的包装类的parseXxx(String str);
      * ①基本数据类型、包装类--->字符串:调用字符串的重载的valueOf()方法
@@ -45,7 +45,7 @@ public class TestString {
         System.out.println(str5);
     }
 
-    /*
+    /**
      * 	public String substring(int startpoint)
         public String substring(int start,int end):返回从start开始到end结束的一个左闭右开的子串。start可以从0开始的。
         pubic String replace(char oldChar,char newChar)
@@ -82,7 +82,7 @@ public class TestString {
 
     }
 
-    /*
+    /**
      * public int length() public char charAt(int
      * index):返回在指定index位置的字符。index从0开始 public boolean equals(Object
      * anObject)：比较两个字符串是否相等。相等返回true。否则返回false public int compareTo(String
