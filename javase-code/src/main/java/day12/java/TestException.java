@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/*
+/**
  * 异常处理的方式二：在方法的声明处，显式的抛出该异常对象的类型
  * 格式：如：public static  void method2() throws FileNotFoundException,IOException{}
  * 当在此方法内部出现异常的时候，会抛出一个异常类的对象，抛给方法的调用者。

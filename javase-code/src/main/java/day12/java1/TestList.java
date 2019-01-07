@@ -1,14 +1,14 @@
 package day12.java1;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import org.junit.Test;
 
 public class TestList {
 
     //ArrayList：List的主要实现类
-	/*
+	/**
 	 * List中相对于Collection，新增加的方法
 	 *  void add(int index, Object ele):在指定的索引位置index添加元素ele
 		boolean addAll(int index, Collection eles)

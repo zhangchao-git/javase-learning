@@ -1,13 +1,13 @@
 package day15;
 
+import org.junit.Test;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import org.junit.Test;
-
-/*
+/**
  * 1.流的分类：
  * 按照数据流向的不同：输入流  输出流
  * 按照处理数据的单位的不同：字节流  字符流（处理的文本文件）

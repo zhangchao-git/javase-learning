@@ -1,14 +1,8 @@
 package day16.java;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
-
 import org.junit.Test;
+
+import java.io.*;
 
 public class TestObjectInputOutputStream {
     // 对象的反序列化过程：将硬盘中的文件通过ObjectInputStream转换为相应的对象
@@ -71,7 +65,7 @@ public class TestObjectInputOutputStream {
     }
 }
 
-/*
+/**
  * 要实现序列化的类： 1.要求此类是可序列化的：实现Serializable接口
  * 2.要求类的属性同样的要实现Serializable接口
  * 3.提供一个版本号：private static final long serialVersionUID

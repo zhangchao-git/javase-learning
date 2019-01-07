@@ -1,19 +1,10 @@
 package day15;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-
 import org.junit.Test;
 
-/*
+import java.io.*;
+
+/**
  * 抽象基类			节点流（文件流）                                缓冲流（处理流的一种,可以提升文件操作的效率）
  * InputStream		FileInputStream			BufferedInputStream
  * OutputStream		FileOutputStream		BufferedOutputStream  (flush())

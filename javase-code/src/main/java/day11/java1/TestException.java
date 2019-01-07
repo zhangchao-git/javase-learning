@@ -1,13 +1,12 @@
 package day11.java1;
 
-import java.io.File;
-import java.io.FileInputStream;
+import org.junit.Test;
+
 import java.util.Date;
 import java.util.Scanner;
 
-import org.junit.Test;
-
-/*一、异常的体系结构
+/**
+ *一、异常的体系结构
  * java.lang.Throwable
  * 		|-----Error:错误，程序中不进行处理
  * 		|-----Exception:异常，要求在编写程序时，就要考虑到对这些异常的处理

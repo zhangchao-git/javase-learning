@@ -1,15 +1,10 @@
 package day13.java;
 
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.TreeSet;
-
 import org.junit.Test;
 
-/*
+import java.util.*;
+
+/**
  * Collection接口 ：
  * 		|------List接口：
  * 			|------ArrayList（主要的实现类）、
@@ -49,7 +44,7 @@ public class TestSet {
         }
     }
 
-    /*
+    /**
      * TreeSet的定制排序： 见下面的步骤 compare()与hashCode()以及equals()三者保持一致！
      */
     @Test
@@ -86,7 +81,7 @@ public class TestSet {
         }
     }
 
-    /*
+    /**
      * TreeSet: 1.向TreeSet中添加的元素必须是同一个类的。
      * 2.可以按照添加进集合中的元素的指定的顺序遍历。像String，包装类等默认按照从小到大的顺序遍历。
      * 3.当向TreeSet中添加自定义类的对象时，有两种排序方法：①自然排序②定制排序
@@ -121,7 +116,7 @@ public class TestSet {
 
     }
 
-    /*
+    /**
      * LinkedHashSet:使用链表维护了一个添加进集合中的顺序。导致当我们遍历LinkedHashSet集合
      * 元素时，是按照添加进去的顺序遍历的！
      *
@@ -144,7 +139,7 @@ public class TestSet {
 
     }
 
-    /*
+    /**
      * Set:存储的元素是无序的，不可重复的！
      *  1.无序性：无序性！= 随机性。真正的无序性，指的是元素在底层存储的位置是无序的。
      * 2.不可重复性：当向Set中添加进相同的元素的时候，后面的这个不能添加进去。

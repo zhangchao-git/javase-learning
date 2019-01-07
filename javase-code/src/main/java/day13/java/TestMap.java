@@ -1,20 +1,12 @@
 package day13.java;
 
+import org.junit.Test;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-import java.util.TreeMap;
-
-import org.junit.Test;
+import java.util.*;
 
 /*
  * Collection接口
@@ -136,7 +128,7 @@ public class TestMap {
         }
     }
 
-    /*
+    /**
      * Object put(Object key,Object value):向Map中添加一个元素 Object remove(Object
      * key):按照指定的key删除此key-value void putAll(Map t) void clear():清空 Object
      * get(Object key)：获取指定key的value值。若无此key，则返回null boolean containsKey(Object

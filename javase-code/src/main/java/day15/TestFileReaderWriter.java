@@ -1,14 +1,13 @@
 package day15;
 
+import org.junit.Test;
+
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import org.junit.Test;
-
-/*
+/**
  * 使用FileReader、FileWriter 可以实现文本文件的复制。
  * 对于非文本文件（视频文件、音频文件、图片），只能使用字节流！
  */

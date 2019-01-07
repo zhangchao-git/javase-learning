@@ -1,21 +1,11 @@
 package day15;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
-
 import org.junit.Test;
 
+import java.io.*;
+
 public class TestOtherStream {
-    /*
+    /**
      * 标准的输入输出流：
      * 标准的输出流：System.out
      * 标准的输入流：System.in
@@ -57,7 +47,7 @@ public class TestOtherStream {
         }
     }
 
-    /*
+    /**
      * 如何实现字节流与字符流之间的转换：
      * 转换流：InputStreamReader  OutputStreamWriter
      * 编码：字符串  --->字节数组

@@ -1,6 +1,6 @@
 package day16.java1;
 
-/*
+/**
  * Thread的常用方法：
  * 1.start()：启动线程并执行相应的run()方法
  * 2.run():子线程要执行的代码放入run()方法中

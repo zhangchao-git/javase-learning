@@ -1,5 +1,7 @@
 package day11.java1;
 
+import org.junit.Test;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,9 +10,7 @@ import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import org.junit.Test;
-
-/*
+/**
  * 二、如何处理Exception的异常
  * Java提供的是异常处理的抓抛模型
  * 1."抛"：当我们执行代码时，一旦出现异常，就会在异常的代码处生成一个对应的异常类型的对象，并

@@ -1,6 +1,6 @@
 package day11.java;
 
-/*
+/**
  * 关于局部内部类的使用
  */
 public class TestInnerClass1 {

@@ -1,20 +1,20 @@
 package day13.java;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import org.junit.Test;
-
-/*
+/**
  * 操作Collection以及Map的工具类：Collections
  *
  * 面试题：区分Collection与Collections
  *
  */
 public class TestCollections {
-    /*
+    /**
      *  Object max(Collection)：根据元素的自然顺序，返回给定集合中的最大元素
         Object max(Collection，Comparator)：根据 Comparator 指定的顺序，返回给定集合中的最大元素
         Object min(Collection)
@@ -46,7 +46,7 @@ public class TestCollections {
         System.out.println(list2);
     }
 
-    /*
+    /**
      *  reverse(List)：反转 List 中元素的顺序
         shuffle(List)：对 List 集合元素进行随机排序
         sort(List)：根据元素的自然顺序对指定 List 集合元素按升序排序

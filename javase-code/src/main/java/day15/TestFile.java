@@ -1,12 +1,12 @@
 package day15;
 
+import org.junit.Test;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
-import org.junit.Test;
-
-/*
+/**
  * java.io.File类
  * 1.凡是与输入、输出相关的类、接口等都定义在java.io包下
  * 2.File是一个类，可以有构造器创建其对象。此对象对应着一个文件（.txt .avi .doc .ppt .mp3 .jpg）或文件目录
@@ -15,7 +15,7 @@ import org.junit.Test;
  * 5.File类的对象常作为io流的具体类的构造器的形参。
  */
 public class TestFile {
-    /*
+    /**
      *  createNewFile()
         delete()
         mkDir():创建一个文件目录。只有在上层文件目录存在的情况下，才能返回true

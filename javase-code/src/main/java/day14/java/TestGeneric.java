@@ -1,16 +1,10 @@
 package day14.java;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import org.junit.Test;
 
-/*
+import java.util.*;
+
+/**
  * 泛型的使用
  * 1.在集合中使用泛型(掌握)
  * 2.自定义泛型类、泛型接口、泛型方法（理解 --->使用）
