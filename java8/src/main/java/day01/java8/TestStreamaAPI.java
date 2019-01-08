@@ -1,14 +1,14 @@
 package day01.java8;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Stream;
 
-import org.junit.Test;
-
-/*
+/**
  * 一、Stream API 的操作步骤：
  * 
  * 1. 创建 Stream
@@ -56,7 +56,7 @@ public class TestStreamaAPI {
 			new Employee(105, "田七", 38, 5555.55)
 	);
 	
-	/*
+	/**
 	  筛选与切片
 		filter——接收 Lambda ， 从流中排除某些元素。
 		limit——截断流，使其元素不超过给定数量。
