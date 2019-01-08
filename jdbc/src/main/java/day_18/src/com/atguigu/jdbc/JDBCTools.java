@@ -77,7 +77,7 @@ public class JDBCTools {
 
 		// 2). 获取 jdbc.properties 对应的输入流
 		InputStream in = JDBCTools.class.getClassLoader().getResourceAsStream(
-				"jdbc.properties");
+				"day_118/src/jdbc.properties");
 
 		// 3). 加载 2） 对应的输入流
 		properties.load(in);
