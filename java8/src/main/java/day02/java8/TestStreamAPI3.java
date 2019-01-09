@@ -48,10 +48,11 @@ public class TestStreamAPI3 {
 			.map(Employee::getName)
 			.flatMap(TestStreamAPI1::filterCharacter)
 			.map((ch) -> {
-				if(ch.equals('六'))
+				if(ch.equals("六")){
 					return 1;
-				else 
+				}else{
 					return 0;
+				}
 			}).reduce(Integer::sum);
 		
 		System.out.println(sum.get());
