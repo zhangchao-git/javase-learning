@@ -2,8 +2,8 @@ package day01;
 
 import java.util.concurrent.CountDownLatch;
 
-/*
- * CountDownLatch 锛氶棴閿侊紝鍦ㄥ畬鎴愭煇浜涜繍绠楁槸锛屽彧鏈夊叾浠栨墍鏈夌嚎绋嬬殑杩愮畻鍏ㄩ儴瀹屾垚锛屽綋鍓嶈繍绠楁墠缁х画鎵ц
+/**
+ * CountDownLatch ：闭锁，在完成某些运算是，只有其他所有线程的运算全部完成，当前运算才继续执行
  */
 public class TestCountDownLatch {
 
@@ -18,13 +18,14 @@ public class TestCountDownLatch {
 		}
 
 		try {
+			System.out.println("等待");
 			latch.await();
 		} catch (InterruptedException e) {
 		}
 
 		long end = System.currentTimeMillis();
 
-		System.out.println("鑰楄垂鏃堕棿涓猴細" + (end - start));
+		System.out.println("耗费时间为：" + (end - start));
 	}
 
 }
@@ -43,7 +44,7 @@ class LatchDemo implements Runnable {
 		try {
 			for (int i = 0; i < 50000; i++) {
 				if (i % 2 == 0) {
-					System.out.println(i);
+//					System.out.println(i);
 				}
 			}
 		} finally {
