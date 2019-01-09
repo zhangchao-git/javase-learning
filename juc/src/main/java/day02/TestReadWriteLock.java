@@ -3,7 +3,7 @@ package day02;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-/*
+/**
  * 1. ReadWriteLock : 读写锁
  * 
  * 写写/读写 需要“互斥”

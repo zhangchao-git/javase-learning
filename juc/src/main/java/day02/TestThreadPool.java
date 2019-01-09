@@ -8,26 +8,26 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
- * ä¸€ã€çº¿ç¨‹æ± ï¼šæä¾›äº†ä¸€ä¸ªçº¿ç¨‹é˜Ÿåˆ—ï¼Œé˜Ÿåˆ—ä¸­ä¿å­˜ç€æ‰€æœ‰ç­‰å¾…çŠ¶æ€çš„çº¿ç¨‹ã€‚é¿å…äº†åˆ›å»ºä¸é”€æ¯é¢å¤–å¼€é”€ï¼Œæé«˜äº†å“åº”çš„é€Ÿåº¦ã€‚
+ * Ò»¡¢Ïß³Ì³Ø£ºÌá¹©ÁËÒ»¸öÏß³Ì¶ÓÁĞ£¬¶ÓÁĞÖĞ±£´æ×ÅËùÓĞµÈ´ı×´Ì¬µÄÏß³Ì¡£±ÜÃâÁË´´½¨ÓëÏú»Ù¶îÍâ¿ªÏú£¬Ìá¸ßÁËÏìÓ¦µÄËÙ¶È¡£
  * 
- * äºŒã€çº¿ç¨‹æ± çš„ä½“ç³»ç»“æ„ï¼š
- * 	java.util.concurrent.Executor : è´Ÿè´£çº¿ç¨‹çš„ä½¿ç”¨ä¸è°ƒåº¦çš„æ ¹æ¥å£
- * 		|--**ExecutorService å­æ¥å£: çº¿ç¨‹æ± çš„ä¸»è¦æ¥å£
- * 			|--ThreadPoolExecutor çº¿ç¨‹æ± çš„å®ç°ç±»
- * 			|--ScheduledExecutorService å­æ¥å£ï¼šè´Ÿè´£çº¿ç¨‹çš„è°ƒåº¦
- * 				|--ScheduledThreadPoolExecutor ï¼šç»§æ‰¿ ThreadPoolExecutorï¼Œ å®ç° ScheduledExecutorService
+ * ¶ş¡¢Ïß³Ì³ØµÄÌåÏµ½á¹¹£º
+ * 	java.util.concurrent.Executor : ¸ºÔğÏß³ÌµÄÊ¹ÓÃÓëµ÷¶ÈµÄ¸ù½Ó¿Ú
+ * 		|--**ExecutorService ×Ó½Ó¿Ú: Ïß³Ì³ØµÄÖ÷Òª½Ó¿Ú
+ * 			|--ThreadPoolExecutor Ïß³Ì³ØµÄÊµÏÖÀà
+ * 			|--ScheduledExecutorService ×Ó½Ó¿Ú£º¸ºÔğÏß³ÌµÄµ÷¶È
+ * 				|--ScheduledThreadPoolExecutor £º¼Ì³Ğ ThreadPoolExecutor£¬ ÊµÏÖ ScheduledExecutorService
  * 
- * ä¸‰ã€å·¥å…·ç±» : Executors 
- * ExecutorService newFixedThreadPool() : åˆ›å»ºå›ºå®šå¤§å°çš„çº¿ç¨‹æ± 
- * ExecutorService newCachedThreadPool() : ç¼“å­˜çº¿ç¨‹æ± ï¼Œçº¿ç¨‹æ± çš„æ•°é‡ä¸å›ºå®šï¼Œå¯ä»¥æ ¹æ®éœ€æ±‚è‡ªåŠ¨çš„æ›´æ”¹æ•°é‡ã€‚
- * ExecutorService newSingleThreadExecutor() : åˆ›å»ºå•ä¸ªçº¿ç¨‹æ± ã€‚çº¿ç¨‹æ± ä¸­åªæœ‰ä¸€ä¸ªçº¿ç¨‹
+ * Èı¡¢¹¤¾ßÀà : Executors 
+ * ExecutorService newFixedThreadPool() : ´´½¨¹Ì¶¨´óĞ¡µÄÏß³Ì³Ø
+ * ExecutorService newCachedThreadPool() : »º´æÏß³Ì³Ø£¬Ïß³Ì³ØµÄÊıÁ¿²»¹Ì¶¨£¬¿ÉÒÔ¸ù¾İĞèÇó×Ô¶¯µÄ¸ü¸ÄÊıÁ¿¡£
+ * ExecutorService newSingleThreadExecutor() : ´´½¨µ¥¸öÏß³Ì³Ø¡£Ïß³Ì³ØÖĞÖ»ÓĞÒ»¸öÏß³Ì
  * 
- * ScheduledExecutorService newScheduledThreadPool() : åˆ›å»ºå›ºå®šå¤§å°çš„çº¿ç¨‹ï¼Œå¯ä»¥å»¶è¿Ÿæˆ–å®šæ—¶çš„æ‰§è¡Œä»»åŠ¡ã€‚
+ * ScheduledExecutorService newScheduledThreadPool() : ´´½¨¹Ì¶¨´óĞ¡µÄÏß³Ì£¬¿ÉÒÔÑÓ³Ù»ò¶¨Ê±µÄÖ´ĞĞÈÎÎñ¡£
  */
 public class TestThreadPool {
 	
 	public static void main(String[] args) throws Exception {
-		//1. åˆ›å»ºçº¿ç¨‹æ± 
+		//1. ´´½¨Ïß³Ì³Ø
 		ExecutorService pool = Executors.newFixedThreadPool(5);
 		
 		List<Future<Integer>> list = new ArrayList<>();
@@ -61,12 +61,12 @@ public class TestThreadPool {
 		
 		/*ThreadPoolDemo tpd = new ThreadPoolDemo();
 		
-		//2. ä¸ºçº¿ç¨‹æ± ä¸­çš„çº¿ç¨‹åˆ†é…ä»»åŠ¡
+		//2. ÎªÏß³Ì³ØÖĞµÄÏß³Ì·ÖÅäÈÎÎñ
 		for (int i = 0; i < 10; i++) {
 			pool.submit(tpd);
 		}
 		
-		//3. å…³é—­çº¿ç¨‹æ± 
+		//3. ¹Ø±ÕÏß³Ì³Ø
 		pool.shutdown();*/
 	}
 	

@@ -3,41 +3,41 @@ package day02;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/*
- * ä¸€ã€ç”¨äºè§£å†³å¤šçº¿ç¨‹å®‰å…¨é—®é¢˜çš„æ–¹å¼ï¼š
+/**
+ * Ò»¡¢ÓÃÓÚ½â¾ö¶àÏß³Ì°²È«ÎÊÌâµÄ·½Ê½£º
  * 
- * synchronized:éšå¼é”
- * 1. åŒæ­¥ä»£ç å—
+ * synchronized:ÒşÊ½Ëø
+ * 1. Í¬²½´úÂë¿é
  * 
- * 2. åŒæ­¥æ–¹æ³•
+ * 2. Í¬²½·½·¨
  * 
- * jdk 1.5 åï¼š
- * 3. åŒæ­¥é” Lock
- * æ³¨æ„ï¼šæ˜¯ä¸€ä¸ªæ˜¾ç¤ºé”ï¼Œéœ€è¦é€šè¿‡ lock() æ–¹æ³•ä¸Šé”ï¼Œå¿…é¡»é€šè¿‡ unlock() æ–¹æ³•è¿›è¡Œé‡Šæ”¾é”
+ * jdk 1.5 ºó£º
+ * 3. Í¬²½Ëø Lock
+ * ×¢Òâ£ºÊÇÒ»¸öÏÔÊ¾Ëø£¬ĞèÒªÍ¨¹ı lock() ·½·¨ÉÏËø£¬±ØĞëÍ¨¹ı unlock() ·½·¨½øĞĞÊÍ·ÅËø
  */
 public class TestLock {
 	
 	public static void main(String[] args) {
 		Ticket ticket = new Ticket();
 		
-		new Thread(ticket, "1å·çª—å£").start();
-		new Thread(ticket, "2å·çª—å£").start();
-		new Thread(ticket, "3å·çª—å£").start();
+		new Thread(ticket, "1ºÅ´°¿Ú").start();
+		new Thread(ticket, "2ºÅ´°¿Ú").start();
+		new Thread(ticket, "3ºÅ´°¿Ú").start();
 	}
 
 }
 
 class Ticket implements Runnable{
 	
-	private int tick = 100;
-	
+	private volatile int tick = 100;
+
 	private Lock lock = new ReentrantLock();
 
 	@Override
 	public void run() {
 		while(true){
 			
-			lock.lock(); //ä¸Šé”
+			lock.lock(); //ÉÏËø
 			
 			try{
 				if(tick > 0){
@@ -45,11 +45,11 @@ class Ticket implements Runnable{
 						Thread.sleep(200);
 					} catch (InterruptedException e) {
 					}
-					
-					System.out.println(Thread.currentThread().getName() + " å®Œæˆå”®ç¥¨ï¼Œä½™ç¥¨ä¸ºï¼š" + --tick);
+
+					System.out.println(Thread.currentThread().getName() + " Íê³ÉÊÛÆ±£¬ÓàÆ±Îª£º" + --tick);
 				}
 			}finally{
-				lock.unlock(); //é‡Šæ”¾é”
+				lock.unlock(); //ÊÍ·ÅËø
 			}
 		}
 	}

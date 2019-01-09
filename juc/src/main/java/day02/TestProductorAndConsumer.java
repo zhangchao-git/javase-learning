@@ -1,7 +1,9 @@
 package day02;
 
-/*
+/**
  * 生产者和消费者案例
+ *
+ * 虚假唤醒用while
  */
 public class TestProductorAndConsumer {
 
