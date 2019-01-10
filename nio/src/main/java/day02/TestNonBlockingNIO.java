@@ -1,5 +1,7 @@
 package day02;
 
+import org.junit.Test;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -11,9 +13,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Scanner;
 
-import org.junit.Test;
-
-/*
+/**
  * 一、使用 NIO 完成网络通信的三个核心：
  * 
  * 1. 通道（Channel）：负责连接

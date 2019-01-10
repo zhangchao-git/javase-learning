@@ -21,67 +21,67 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 /**
- * ä¸€ã€é€šé“ï¼ˆChannelï¼‰ï¼šç”¨äºæºèŠ‚ç‚¹ä¸ç›®æ ‡èŠ‚ç‚¹çš„è¿æ¥ã€‚åœ¨ Java NIO ä¸­è´Ÿè´£ç¼“å†²åŒºä¸­æ•°æ®çš„ä¼ è¾“ã€‚Channel æœ¬èº«ä¸å­˜å‚¨æ•°æ®ï¼Œå› æ­¤éœ€è¦é…åˆç¼“å†²åŒºè¿›è¡Œä¼ è¾“ã€‚
+ * Ò»¡¢Í¨µÀ£¨Channel£©£ºÓÃÓÚÔ´½ÚµãÓëÄ¿±ê½ÚµãµÄÁ¬½Ó¡£ÔÚ Java NIO ÖĞ¸ºÔğ»º³åÇøÖĞÊı¾İµÄ´«Êä¡£Channel ±¾Éí²»´æ´¢Êı¾İ£¬Òò´ËĞèÒªÅäºÏ»º³åÇø½øĞĞ´«Êä¡£
  * 
- * äºŒã€é€šé“çš„ä¸»è¦å®ç°ç±»
- * 	java.nio.channels.Channel æ¥å£ï¼š
+ * ¶ş¡¢Í¨µÀµÄÖ÷ÒªÊµÏÖÀà
+ * 	java.nio.channels.Channel ½Ó¿Ú£º
  * 		|--FileChannel
  * 		|--SocketChannel
  * 		|--ServerSocketChannel
  * 		|--DatagramChannel
  * 
- * ä¸‰ã€è·å–é€šé“
- * 1. Java é’ˆå¯¹æ”¯æŒé€šé“çš„ç±»æä¾›äº† getChannel() æ–¹æ³•
- * 		æœ¬åœ° IOï¼š
+ * Èı¡¢»ñÈ¡Í¨µÀ
+ * 1. Java Õë¶ÔÖ§³ÖÍ¨µÀµÄÀàÌá¹©ÁË getChannel() ·½·¨
+ * 		±¾µØ IO£º
  * 		FileInputStream/FileOutputStream
  * 		RandomAccessFile
  * 
- * 		ç½‘ç»œIOï¼š
+ * 		ÍøÂçIO£º
  * 		Socket
  * 		ServerSocket
  * 		DatagramSocket
  * 		
- * 2. åœ¨ JDK 1.7 ä¸­çš„ NIO.2 é’ˆå¯¹å„ä¸ªé€šé“æä¾›äº†é™æ€æ–¹æ³• open()
- * 3. åœ¨ JDK 1.7 ä¸­çš„ NIO.2 çš„ Files å·¥å…·ç±»çš„ newByteChannel()
+ * 2. ÔÚ JDK 1.7 ÖĞµÄ NIO.2 Õë¶Ô¸÷¸öÍ¨µÀÌá¹©ÁË¾²Ì¬·½·¨ open()
+ * 3. ÔÚ JDK 1.7 ÖĞµÄ NIO.2 µÄ Files ¹¤¾ßÀàµÄ newByteChannel()
  * 
- * å››ã€é€šé“ä¹‹é—´çš„æ•°æ®ä¼ è¾“
+ * ËÄ¡¢Í¨µÀÖ®¼äµÄÊı¾İ´«Êä
  * transferFrom()
  * transferTo()
  * 
- * äº”ã€åˆ†æ•£(Scatter)ä¸èšé›†(Gather)
- * åˆ†æ•£è¯»å–ï¼ˆScattering Readsï¼‰ï¼šå°†é€šé“ä¸­çš„æ•°æ®åˆ†æ•£åˆ°å¤šä¸ªç¼“å†²åŒºä¸­
- * èšé›†å†™å…¥ï¼ˆGathering Writesï¼‰ï¼šå°†å¤šä¸ªç¼“å†²åŒºä¸­çš„æ•°æ®èšé›†åˆ°é€šé“ä¸­
+ * Îå¡¢·ÖÉ¢(Scatter)Óë¾Û¼¯(Gather)
+ * ·ÖÉ¢¶ÁÈ¡£¨Scattering Reads£©£º½«Í¨µÀÖĞµÄÊı¾İ·ÖÉ¢µ½¶à¸ö»º³åÇøÖĞ
+ * ¾Û¼¯Ğ´Èë£¨Gathering Writes£©£º½«¶à¸ö»º³åÇøÖĞµÄÊı¾İ¾Û¼¯µ½Í¨µÀÖĞ
  * 
- * å…­ã€å­—ç¬¦é›†ï¼šCharset
- * ç¼–ç ï¼šå­—ç¬¦ä¸² -> å­—èŠ‚æ•°ç»„
- * è§£ç ï¼šå­—èŠ‚æ•°ç»„  -> å­—ç¬¦ä¸²
+ * Áù¡¢×Ö·û¼¯£ºCharset
+ * ±àÂë£º×Ö·û´® -> ×Ö½ÚÊı×é
+ * ½âÂë£º×Ö½ÚÊı×é  -> ×Ö·û´®
  * 
  */
 public class TestChannel {
 	
-	//å­—ç¬¦é›†
+	//×Ö·û¼¯
 	@Test
 	public void test6() throws IOException{
 		Charset cs1 = Charset.forName("GBK");
 		
-		//è·å–ç¼–ç å™¨
+		//»ñÈ¡±àÂëÆ÷
 		CharsetEncoder ce = cs1.newEncoder();
 		
-		//è·å–è§£ç å™¨
+		//»ñÈ¡½âÂëÆ÷
 		CharsetDecoder cd = cs1.newDecoder();
 		
 		CharBuffer cBuf = CharBuffer.allocate(1024);
-		cBuf.put("å°šç¡…è°·å¨æ­¦ï¼");
+		cBuf.put("ÉĞ¹è¹ÈÍşÎä£¡");
 		cBuf.flip();
 		
-		//ç¼–ç 
+		//±àÂë
 		ByteBuffer bBuf = ce.encode(cBuf);
 		
 		for (int i = 0; i < 12; i++) {
 			System.out.println(bBuf.get());
 		}
 		
-		//è§£ç 
+		//½âÂë
 		bBuf.flip();
 		CharBuffer cBuf2 = cd.decode(bBuf);
 		System.out.println(cBuf2.toString());
@@ -105,19 +105,19 @@ public class TestChannel {
 		}
 	}
 	
-	//åˆ†æ•£å’Œèšé›†
+	//·ÖÉ¢ºÍ¾Û¼¯
 	@Test
 	public void test4() throws IOException{
 		RandomAccessFile raf1 = new RandomAccessFile("1.txt", "rw");
 		
-		//1. è·å–é€šé“
+		//1. »ñÈ¡Í¨µÀ
 		FileChannel channel1 = raf1.getChannel();
 		
-		//2. åˆ†é…æŒ‡å®šå¤§å°çš„ç¼“å†²åŒº
+		//2. ·ÖÅäÖ¸¶¨´óĞ¡µÄ»º³åÇø
 		ByteBuffer buf1 = ByteBuffer.allocate(100);
 		ByteBuffer buf2 = ByteBuffer.allocate(1024);
 		
-		//3. åˆ†æ•£è¯»å–
+		//3. ·ÖÉ¢¶ÁÈ¡
 		ByteBuffer[] bufs = {buf1, buf2};
 		channel1.read(bufs);
 		
@@ -129,14 +129,14 @@ public class TestChannel {
 		System.out.println("-----------------");
 		System.out.println(new String(bufs[1].array(), 0, bufs[1].limit()));
 		
-		//4. èšé›†å†™å…¥
+		//4. ¾Û¼¯Ğ´Èë
 		RandomAccessFile raf2 = new RandomAccessFile("2.txt", "rw");
 		FileChannel channel2 = raf2.getChannel();
 		
 		channel2.write(bufs);
 	}
 	
-	//é€šé“ä¹‹é—´çš„æ•°æ®ä¼ è¾“(ç›´æ¥ç¼“å†²åŒº)
+	//Í¨µÀÖ®¼äµÄÊı¾İ´«Êä(Ö±½Ó»º³åÇø)
 	@Test
 	public void test3() throws IOException{
 		FileChannel inChannel = FileChannel.open(Paths.get("d:/1.mkv"), StandardOpenOption.READ);
@@ -149,7 +149,7 @@ public class TestChannel {
 		outChannel.close();
 	}
 	
-	//ä½¿ç”¨ç›´æ¥ç¼“å†²åŒºå®Œæˆæ–‡ä»¶çš„å¤åˆ¶(å†…å­˜æ˜ å°„æ–‡ä»¶)
+	//Ê¹ÓÃÖ±½Ó»º³åÇøÍê³ÉÎÄ¼şµÄ¸´ÖÆ(ÄÚ´æÓ³ÉäÎÄ¼ş)
 	@Test
 	public void test2() throws IOException{//2127-1902-1777
 		long start = System.currentTimeMillis();
@@ -157,11 +157,11 @@ public class TestChannel {
 		FileChannel inChannel = FileChannel.open(Paths.get("d:/1.mkv"), StandardOpenOption.READ);
 		FileChannel outChannel = FileChannel.open(Paths.get("d:/2.mkv"), StandardOpenOption.WRITE, StandardOpenOption.READ, StandardOpenOption.CREATE);
 		
-		//å†…å­˜æ˜ å°„æ–‡ä»¶
+		//ÄÚ´æÓ³ÉäÎÄ¼ş
 		MappedByteBuffer inMappedBuf = inChannel.map(MapMode.READ_ONLY, 0, inChannel.size());
 		MappedByteBuffer outMappedBuf = outChannel.map(MapMode.READ_WRITE, 0, inChannel.size());
 		
-		//ç›´æ¥å¯¹ç¼“å†²åŒºè¿›è¡Œæ•°æ®çš„è¯»å†™æ“ä½œ
+		//Ö±½Ó¶Ô»º³åÇø½øĞĞÊı¾İµÄ¶ÁĞ´²Ù×÷
 		byte[] dst = new byte[inMappedBuf.limit()];
 		inMappedBuf.get(dst);
 		outMappedBuf.put(dst);
@@ -170,17 +170,17 @@ public class TestChannel {
 		outChannel.close();
 		
 		long end = System.currentTimeMillis();
-		System.out.println("è€—è´¹æ—¶é—´ä¸ºï¼š" + (end - start));
+		System.out.println("ºÄ·ÑÊ±¼äÎª£º" + (end - start));
 	}
 	
-	//åˆ©ç”¨é€šé“å®Œæˆæ–‡ä»¶çš„å¤åˆ¶ï¼ˆéç›´æ¥ç¼“å†²åŒºï¼‰
+	//ÀûÓÃÍ¨µÀÍê³ÉÎÄ¼şµÄ¸´ÖÆ£¨·ÇÖ±½Ó»º³åÇø£©
 	@Test
 	public void test1(){//10874-10953
 		long start = System.currentTimeMillis();
 		
 		FileInputStream fis = null;
 		FileOutputStream fos = null;
-		//â‘ è·å–é€šé“
+		//¢Ù»ñÈ¡Í¨µÀ
 		FileChannel inChannel = null;
 		FileChannel outChannel = null;
 		try {
@@ -190,15 +190,15 @@ public class TestChannel {
 			inChannel = fis.getChannel();
 			outChannel = fos.getChannel();
 			
-			//â‘¡åˆ†é…æŒ‡å®šå¤§å°çš„ç¼“å†²åŒº
+			//¢Ú·ÖÅäÖ¸¶¨´óĞ¡µÄ»º³åÇø
 			ByteBuffer buf = ByteBuffer.allocate(1024);
 			
-			//â‘¢å°†é€šé“ä¸­çš„æ•°æ®å­˜å…¥ç¼“å†²åŒºä¸­
+			//¢Û½«Í¨µÀÖĞµÄÊı¾İ´æÈë»º³åÇøÖĞ
 			while(inChannel.read(buf) != -1){
-				buf.flip(); //åˆ‡æ¢è¯»å–æ•°æ®çš„æ¨¡å¼
-				//â‘£å°†ç¼“å†²åŒºä¸­çš„æ•°æ®å†™å…¥é€šé“ä¸­
+				buf.flip(); //ÇĞ»»¶ÁÈ¡Êı¾İµÄÄ£Ê½
+				//¢Ü½«»º³åÇøÖĞµÄÊı¾İĞ´ÈëÍ¨µÀÖĞ
 				outChannel.write(buf);
-				buf.clear(); //æ¸…ç©ºç¼“å†²åŒº
+				buf.clear(); //Çå¿Õ»º³åÇø
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -237,7 +237,7 @@ public class TestChannel {
 		}
 		
 		long end = System.currentTimeMillis();
-		System.out.println("è€—è´¹æ—¶é—´ä¸ºï¼š" + (end - start));
+		System.out.println("ºÄ·ÑÊ±¼äÎª£º" + (end - start));
 		
 	}
 
