@@ -7,6 +7,7 @@ package day01;
  */
 class TestVeriable1 {
     public static void main(String[] args) {
+
         //1.自动类型转换:当容量小的数据类型与容量大的数据类型做运算时，容量小的会自动转换为
         //容量大的数据类型:char,byte,short ===>int ===>long ===>float===double
         int i1 = 12;

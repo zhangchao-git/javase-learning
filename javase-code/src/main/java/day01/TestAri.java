@@ -1,6 +1,8 @@
 package day01;
 
-//测试算术运算符： + - + - * / % ++ -- +
+/**
+ * 测试算术运算符： + - + - * / % ++ -- +
+ */
 class TestAri {
     public static void main(String[] args) {
 

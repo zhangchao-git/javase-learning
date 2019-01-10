@@ -1,6 +1,8 @@
 package day01;
 
-//变量：基本数据类型（8个） vs 引用数据类型（类、接口、数组）
+/**
+ * 变量：基本数据类型（8个） vs 引用数据类型（类、接口、数组）
+ */
 //1.java中的变量定义的格式：数据类型  变量名 = 初始化值
 class TestVeriable {
     public static void main(String[] args) {
