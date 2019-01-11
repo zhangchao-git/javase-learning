@@ -1,9 +1,9 @@
 # javase-learning
-- javase-code ¡Ì
-- mysql       ¡Ì
-- jdbc        ¡Ì
-- java8       ¡Ì
-- juc         ¡Ì
+- javase-code âˆš
+- mysql       âˆš
+- jdbc        âˆš
+- java8       âˆš
+- juc         âˆš
 - nio         ?
 - java9       ?
 - linux       ?
