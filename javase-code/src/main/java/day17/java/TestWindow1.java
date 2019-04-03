@@ -8,6 +8,7 @@ package day17.java;
 class Window1 implements Runnable {
     int ticket = 100;
 
+    @Override
     public void run() {
         while (true) {
             if (ticket > 0) {
