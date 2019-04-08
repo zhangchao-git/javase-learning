@@ -1,4 +1,5 @@
-# javase-learning
+# JAVASE-LEARNING
+
 [1、JAVA语言概述](/javase-code/src/main/resource/1、JAVA语言概述.md)
 
 [2、基本语法](/javase-code/src/main/resource/md/2、基本语法.md)
