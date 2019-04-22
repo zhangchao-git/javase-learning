@@ -2,13 +2,13 @@
 
 [1、JAVA语言概述](/javase-code/src/main/resource/1、JAVA语言概述.md)
 
-[2、基本语法](/javase-code/src/main/resource/md/2、基本语法.md)
+[2、基本语法](/javase-code/src/main/resource/2、基本语法.md)
 
-[3、面向对象(一)](/javase-code/src/main/resource/md/3、面向对象(一).md)
+[3、面向对象(一)](/javase-code/src/main/resource/3、面向对象(一).md)
 
-[4、面向对象(二)](/javase-code/src/main/resource/md/4、面向对象(二).md)
+[4、面向对象(二)](/javase-code/src/main/resource/4、面向对象(二).md)
 
-[5、面向对象(三)](/javase-code/src/main/resource/md/5、面向对象(三).md)
+[5、面向对象(三)](/javase-code/src/main/resource/5、面向对象(三).md)
 
 [6、小结](/javase-code/src/main/resource/6、小结.md)
 
