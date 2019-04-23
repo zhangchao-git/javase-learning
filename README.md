@@ -28,4 +28,5 @@
 
 [14、MySQL基础](/mysql/src/main/resource/MySQL基础.md)
 
+[15、Java8](/java8/src/main/resource/java8.md)
 
